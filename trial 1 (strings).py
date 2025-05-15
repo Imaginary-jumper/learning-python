@@ -6,9 +6,11 @@ print("lenghth of text 1 =", len(text_1))
 print("lenghth of text 2 =", len(text_2))
 
 print("we provide following services:")
-print("1) jumbling words")
-print("2) matching words")
-print("3) addition to index of words")
+print("1) Mocking SpongeBob case")
+print("2) Matching words")
+print("3) Addition to index of words")
+print("4) merge words")
+print("5) exit")
 
 def choose():
     choice = int(input("please choose the s.no. of the service you would like to opt for:"))
@@ -23,10 +25,14 @@ def choose():
         else:
             print("please choose from 1 or 2 only")
             choose()
-    if choice ==2:
+    elif choice ==2:
         match()
-    if choice ==3:
+    elif choice ==3:
         fun_add()
+    elif choice ==4:
+        merge()
+    elif choice ==5:
+        exit()
     else:
         print("please choose a valid service")
         choose()
@@ -41,6 +47,7 @@ def match():
             b= A+1
             print(i ,":", b)
     choose()
+    
 # trial section 2:
 def fun_add():
     shift = int(input("please enter the addition to each digit you desire:"))
@@ -63,7 +70,7 @@ def fun_add():
             new_text += default[index]
     print(new_text)
     choose()
-
+    
 # section 3:
 def ask1(new_text):
     index=-1
@@ -75,5 +82,9 @@ def ask1(new_text):
         else:
             new_text2= new_text2 + new_text[index]
     print(new_text2)
+    choose()
+    
+def merge():
+    print (text_1 , " ", text_2)
     choose()
 choose()
